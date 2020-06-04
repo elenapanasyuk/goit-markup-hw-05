@@ -8,6 +8,7 @@
 /* основной цвет текста #757575 */
 /* белый #FFFFFF  */
 /* акцент #2196F3 */
+/* ховер на карточках портфолио rgba(33, 150, 243, 0.9) */
 /* цвет логотипов клиентов #AFB1B8 */
 /* цвет рамки в карточках портфолио #EEEEEE */
 /* цвет контактов в футере  rgba(255, 255, 255, 0.6) */
@@ -24,6 +25,7 @@
   --title-text-color: #212121;
   --primary-text-color: #757575;
   --accent-color: #2196f3;
+  --hover-portfolio-card: rgba(33, 150, 243, 0.9);
   --clients-icons-color: #afb1b8;
   --portfolio-card-border: #eeeeee;
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
@@ -649,7 +651,7 @@ img {
   display: inline-block;
   width: 100%;
   height: 100%;
-  background-color: var(--accent-color);
+  background-color: var(--hover-portfolio-card);
   opacity: 0;
 }
 
@@ -659,6 +661,8 @@ img {
 
   margin: 0;
   padding: 63px 24px;
+  top: 0;
+  left: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -674,5 +678,10 @@ img {
 
 .card:hover .description,
 .card:hover .card-thumb::before {
+  opacity: 1;
+}
+
+.card:focus .description,
+.card:focus .card-thumb::before {
   opacity: 1;
 }
